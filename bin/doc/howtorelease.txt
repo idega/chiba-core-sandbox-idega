@@ -1,0 +1,18 @@
+How to release a Chiba version
+-------------------------------------------------
+Prerequisites:
+- settings.xml of local Maven installation must be configured for WebDav and scp access
+
+[1] clean checkout of sourcetree from trunk (trunk/chiba-sandbox)
+[2] build + test the code to release
+[3] update release-notes.txt
+[4] update changes.txt
+[5] update version in pom.xml
+[6] update contributors/authors in porm.xml if appropriate
+[7] commit your changes to these files to trunk
+[8] execute 'mvn deploy' to submit to public repository (archiva)
+[9] execute 'mvn -Dmaven.test.failure.ignore=true -Dmaven.compiler.optimize=true clean assembly:assembly' to
+    build distribution files
+[10] create a tag with pattern 'R-CORE-[version] on trunk
+[11] upload files to 'ftp.sourceforge.net/incoming'
+[12] add the files to your release with the release tool on sourceforge

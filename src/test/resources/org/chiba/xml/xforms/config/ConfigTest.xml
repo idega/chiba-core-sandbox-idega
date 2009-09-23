@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: ConfigTest.xml,v 1.1 2009/02/17 09:00:54 civilis Exp $ -->
+<chiba-config>
+    <properties>
+        <property name="test.property" value="test.value"/>
+        <property name="chiba.stylesheets.compiled" value="false"/>
+
+        <property name="chiba.web.dataPrefix" value="d"/>
+        <property name="chiba.web.triggerPrefix" value="t"/>
+        <property name="chiba.ui.initializeDeselectedCases" value="true"/>
+    </properties>
+
+    <!--You can specify an alternate connector factory class-->
+    <connectors factoryClass="test.factory">
+        <uri-resolver scheme="test.scheme" class="test.class"/>
+        <submission-handler scheme="test.scheme" class="test.class"/>
+    </connectors>
+    <extension-functions>
+        <function namespace="http://exslt.org/regular-expressions" name="test" class="org.galasoft.util.xml.servlet.xforms.exslt.Regexp" java-name="test"/>
+    </extension-functions>
+
+</chiba-config>

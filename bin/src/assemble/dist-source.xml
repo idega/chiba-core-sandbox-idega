@@ -1,0 +1,17 @@
+<assembly>
+    <id>src</id>
+    <formats>
+        <format>zip</format>
+        <format>tar.gz</format>
+    </formats>
+    <fileSets>
+        <fileSet>
+          <directory>src</directory>
+        </fileSet>
+        <fileSet>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>

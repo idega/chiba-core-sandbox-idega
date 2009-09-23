@@ -1,0 +1,62 @@
+Creators
+--------
+Joern Turner
+Ulrich Nicolas Lissé
+
+Authors
+-------
+William Boyd
+Oliver Charlet
+Flavio Costa
+Mark Dimon
+Brian Dueck
+Terence Jacyno
+Gregor Klinke
+Ronald van Kuijk
+Robert Leftwich
+Peter Mikula
+Eduardo Millán
+Chris Picton
+Sophie Ramel
+John Spackman
+Andrzej Jan Taramina
+Péter Varga
+
+Contributors
+------------
+Suhail Ahmed
+Adrian Baker
+Dario Bahena
+Nick Van den Bleeken
+Tomislav Bodor
+Michael Bridgen
+Ben Cochran
+Thomas Draier
+Jason Eacott
+Alexander Grosse
+Eric Hanson
+Anja Lehmann
+Yien Lie
+Giota Karadimitriou
+Sabine Krach
+Anselm Kruis
+Murata Makoto
+Lawrence McCay
+Peter Mikhalenko
+Paul Miniato
+Sebastian Ordyniak
+Tanguy Rademakers
+Adam Retter
+Zach Roberts
+Peter Rodgers
+Etienne Schellerup
+Olaf Schreck
+Daniel Shane
+Robert Simmons
+Karla Smith
+Paul Sterk
+Torben Vesterager
+Scott Warren
+Chris Zelenak
+Thomas Ziegert
+Stefan Zorn

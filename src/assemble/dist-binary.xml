@@ -1,0 +1,17 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>zip</format>
+        <format>tar.gz</format>
+    </formats>
+    <files>
+        <file>
+            <source>target/${artifactId}-${version}.jar</source>
+        </file>
+    </files>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>dependent</outputDirectory>
+        </dependencySet>
+    </dependencySets>
+</assembly>

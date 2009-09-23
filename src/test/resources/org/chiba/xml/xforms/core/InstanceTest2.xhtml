@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xf="http://www.w3.org/2002/xforms"
+    xmlns:ev="http://www.w3.org/2001/xml-events">
+    <head>
+        <meta name="author" content="unl at users.sourceforge.net"/>
+        <meta name="description" content="test form for instance"/>
+        <meta name="version" content="$Id: InstanceTest2.xhtml,v 1.1 2009/02/17 09:00:54 civilis Exp $"/>
+        <xf:model id="model">
+            <xf:setvalue ev:event="xforms-link-exception" ref="instance('test')/foo" value="'bar'"/>
+
+            <xf:instance id="instance" xmlns="" src="nonExistingResource.xml"/>
+            <xf:instance id="test" xmlns="">
+                <data>
+                    <foo></foo>
+                </data>
+            </xf:instance>
+        </xf:model>
+    </head>
+    <body>
+    </body>
+</html>

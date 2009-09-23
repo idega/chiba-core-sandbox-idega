@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: DefaultFactoryConfig.xml 2797 2007-08-10 12:45:24Z joern $ -->
+<chiba-config>
+    <!--No factoryClass attribute present, so Chiba will use the default factory-->
+    <connectors>
+        <submission-handler scheme="test" class="org.chiba.xml.xforms.connector.ConnectorFactoryTestSubmissionHandler"/>
+        <uri-resolver scheme="test" class="org.chiba.xml.xforms.connector.ConnectorFactoryTestURIResolver"/>
+    </connectors>
+</chiba-config>

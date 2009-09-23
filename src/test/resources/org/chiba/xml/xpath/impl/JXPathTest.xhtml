@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xf="http://www.w3.org/2002/xforms"
+    xmlns:ev="http://www.w3.org/2001/xml-events">
+    <head>
+        <meta name="author" content="unl at users.sourceforge.net"/>
+        <meta name="description" content="test form for jxpath handling"/>
+        <meta name="version" content="$Id: JXPathTest.xhtml,v 1.1 2009/02/17 09:00:54 civilis Exp $"/>
+        <xf:model id="model-1">
+            <xf:instance id="instance-1" xmlns="">
+                <data>
+                    <my:order my:money="4711" xmlns:my="http://tempuri.org/my">
+                        <my:item my:money="50">
+                            <my:amount>500</my:amount>
+                            <my:discount>100</my:discount>
+                        </my:item>
+                        <my:item my:money="4711">
+                            <my:amount>77</my:amount>
+                            <my:discount>77</my:discount>
+                        </my:item>
+                    </my:order>
+                </data>
+            </xf:instance>
+        </xf:model>
+    </head>
+    <body>
+        <div>No UI ;-)</div>
+    </body>
+</html>

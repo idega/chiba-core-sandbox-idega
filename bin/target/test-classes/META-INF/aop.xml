@@ -1,0 +1,18 @@
+<!DOCTYPE aspectwerkz PUBLIC "-//AspectWerkz//DTD 2.0//EN"
+    "http://aspectwerkz.codehaus.org/dtd/aspectwerkz2.dtd">
+
+<aspectwerkz>
+<system id="weaving-example">
+    <aspect class="etm.contrib.aop.aspectwerkz.EtmAspectWerkzAspect"
+            deployment-model="perJVM">
+        <pointcut name="chiba">
+            execution(* org.chiba.xml.xforms.core.Model.rebuild(..)) OR
+            execution(* org.chiba.xml.xforms.core.Model.recalculate(..)) OR
+            execution(* org.chiba.xml.xforms.core.Model.revalidate(..)) OR
+            execution(* org.chiba.xml.xforms.core.Model.refresh(..))
+        </pointcut>
+        <advice name="monitor" type="around" bind-to="chiba"/>
+    </aspect>
+
+</system>
+</aspectwerkz>

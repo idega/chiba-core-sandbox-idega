@@ -1,0 +1,16 @@
+/AbstractConnector.java/1.1/Tue Feb 17 09:00:53 2009//
+/Connector.java/1.1/Tue Feb 17 09:00:53 2009//
+/ConnectorFactory.java/1.1/Tue Feb 17 09:00:53 2009//
+/ConnectorHelper.java/1.1/Tue Jul  8 13:27:54 2008//
+/DefaultConnectorFactory.java/1.1/Tue Feb 17 09:00:53 2009//
+/InstanceSerializer.java/1.1/Tue Jul  8 13:27:54 2008//
+/InstanceSerializerMap.java/1.1/Tue Jul  8 13:27:54 2008//
+/SchemaValidator.java/1.1/Tue Jul  8 13:27:54 2008//
+/SubmissionHandler.java/1.1/Tue Feb 17 09:00:53 2009//
+/URIResolver.java/1.1/Tue Feb 17 09:00:53 2009//
+D/context////
+D/echo////
+D/file////
+D/http////
+D/serializer////
+D/xslt////

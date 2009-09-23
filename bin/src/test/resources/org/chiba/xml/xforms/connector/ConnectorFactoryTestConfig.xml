@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: ConnectorFactoryTestConfig.xml 2797 2007-08-10 12:45:24Z joern $ -->
+<chiba-config>
+    <connectors factoryClass="org.chiba.xml.xforms.connector.TestConnectorFactory">
+        <submission-handler scheme="test" class="org.chiba.xml.xforms.connector.ConnectorFactoryTestSubmissionHandler"/>
+        <uri-resolver scheme="test" class="org.chiba.xml.xforms.connector.ConnectorFactoryTestURIResolver"/>
+    </connectors>
+</chiba-config>

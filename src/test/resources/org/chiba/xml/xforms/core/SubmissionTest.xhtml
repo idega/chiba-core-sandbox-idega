@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xf="http://www.w3.org/2002/xforms"
+    xmlns:ev="http://www.w3.org/2001/xml-events">
+    <head>
+        <meta name="author" content="unl at users.sourceforge.net"/>
+        <meta name="description" content="test form for submission"/>
+        <meta name="version" content="$Id: SubmissionTest.xhtml,v 1.1 2009/02/17 09:00:54 civilis Exp $"/>
+        <xf:model>
+            <xf:instance xmlns="">
+                <data>
+                    <item>value</item>
+                </data>
+            </xf:instance>
+
+            <xf:submission id="submission-replace-instance" action="echo:foo" method="post" replace="instance"/>
+            <xf:submission id="submission-chained" action="echo:foo" method="post" replace="none">
+                <xf:send ev:event="xforms-submit-done" submission="submission-replace-instance"/>
+            </xf:submission>
+            <xf:submission id="submission-empty-nodeset" action="echo:foo" method="post" replace="none" ref="empty-nodeset"/>
+            <xf:submission id="submission-404" action="bogus" method="post" />
+        </xf:model>
+    </head>
+    <body>
+        <div>Nothing to see ;-)</div>
+    </body>
+</html>

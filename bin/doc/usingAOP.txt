@@ -1,0 +1,15 @@
+Using AspectWerkz AOP with Chiba Core
+-----------------------------------------------------
+There's a special build file 'aop-build.xml' that can be used to weave aspect-oriented code
+into Chiba for testing, logging, tuning for instance.
+
+to use it you must have a seperate installation of AspectWerkz somewhere on your disk. You can download
+it from http://aspectwerkz.codehaus.org
+1. open build.properties and uncomment the property 'aspectwerkz.dist.path'
+2. configure the property to point to the installation dir of your aspectwerkz
+1. consult the file 'aop.xml' in src/META-INF
+2. configure your matching rules to weave code (consult the docs of AspectWerkz)
+3. build your code with >ant build
+4. weave your rules with >ant offline-weaving
+ 
+

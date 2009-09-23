@@ -1,0 +1,184 @@
+Changes from 1.3.0 to 1.4.0
+---------------------------
+* passing in resource-uri as defined by 4.5.4 of XForms 1.1 in all relevant places
+* do not clear info of XFormsErrorIndication any more when event for this exception has been dispatched.
+This allows to propagate the context information up the exception chain
+* changed Log4j Logger to commons.logging logger
+* applied patch from Nick Van den Bleeken - #397
+*fixed toggle behavior regarding refresh. As we optimized the updating of case elements to not refresh controls
+in non-selected cases we need to explicitly handle refresh whenever a toggle is fired. Addresses issue #385
+* integrated XSLTSubmissionHandler with test
+* preparing XForms 1.1 insert implementation
+* additional testcases for insert origin
+* fixed getVersion to not throw NullPointer. Return '1.0' as default.
+* implemented seconds-to-dateTime() function (#296)
+* #299 - fixed missing part: contextmodel is regarded during evaluation of instance() function
+* implemented the days-to-date function (#295)
+* implemented the luhn function (#288)
+* implemented the random function (#289)
+* implemented the power function (#287)
+* renamed update() into refresh()
+* Added support for xforms:copy
+* migration to Maven2
+* Improved xforms:copy tests
+* applied Ticket #258
+* (De)Serialization of ChibaBean running.
+* applied patch from Nick Van den Bleeken regarding [ 1656034 ]  XForms days-from-date function accepts none valid date stri...
+* applied patch [ 1630626 ] Better HTTP Error
+* fixed problem with getVersion when there's no model at all or the version string does not match the allowed values (1.0, 1.1)
+* Added the function uploadContentLength() which will return the length of decoded content for uploaded files in bytes.
+e.g. constraint="chiba:uploadContentLength(.) &lt; 100000"
+Will limit uploaded file content to 100K
+
+
+Changes from 1.3.0 to 1.3.x
+---------------------------
+- Extension Functions
+    * fixed [ 1656034 ]  XForms days-from-date function accepts none valid date stri...
+    
+Changes from 1.2.0 to 1.3.0
+---------------------------
+- Libraries:
+    * updated ant to 1.6.5, commons-codec to 1.3, commons-httpclient to 3.0.1,
+      commons-logging to 1.0.4, log4j to 1.2.13, xerces to 2.8.0
+    * renamed for clarity (version/patched): activation, commons-jxpath, junit, mail
+- Repeat:
+    * fixed insert/delete handling and index state change notification
+    * enabled repeated Switches
+- UI controls:
+    * state change notification now includes @chiba:type
+    * removed @chiba:xpath
+    * Bound controls now have access to complete xml subtrees not just leaf nodes
+      (allows customs controls that work with structured data)
+- Context access:
+    * added chiba:context() function for easy access
+    * refactored ContextResolver
+    * removed ContextObjectResolver and ContextSubmissionHandler
+- Upload:
+    * refactored completely to overcome binding issues
+- Instance:
+    * fixed bug [ 1497183 ] wrong position of entry in instance after insert
+- Dependency Engine:
+    * fixed bug [ 1478586 ] Dependency calculation wrong
+    * fixed bug [ 1415946 ] bind/@calculate fails but should return empty nodeset
+- Textarea:
+    * added line-break normalization
+- Setvalue and Setindex Actions:
+    * fixed binding context for xf:setindex and xf:setvalue
+    * made conform to XForms 1.0 SE Errata
+- Event Sequencing:
+    * fixed bug [ 1400328 ] Nested events not sequenced
+- Packages:
+    * moved classes corresponding to XForms Core Module to org.chiba.xml.xforms.core
+    * refactored package structure in many areas
+- XFormsModelElement:
+    * made conform to its IDL
+- Load Action:
+    * added support for Attribute Value Templates
+- Binding Resolution:
+    * fixed bug [ 1438027 ] Use of instance() in bind nodeset
+- PreProcessor:
+    * made obsolete
+- Submission:
+    * fixed bug [ 1398668 ] Submission validation flawed
+    * fixed bug [ 1413247 ] relevance selection during submit fails
+    * fixed bug [ 1439884 ] xforms:send from xforms-submit-done causes stack overflow
+    * added support for Attribute Value Templates
+    * fixed bug [ 1523562 ] Submission with non-existant ref gives nullpointerexception
+    * made conform to XForms 1.0 SE Errata
+    * applied patch [ 1630626 ] Better HTTP Error
+- StylesheetCache:
+    * fixed bug [ 1388861 ] StylesheetCache lowercases filenames,
+    * fixed bug [ 1391166 ] StylesheetCache include bug,
+    * fixed bug [ 1391949 ] StylesheetCache fails to resolve nested includes
+- case element:
+    * fixed missing initialization of actions
+- XForms 1.1
+    * added support for conditional execution of actions with 'if' attribute
+    * added support for XForms 1.1 current() function
+- Misc
+    * new 'script' action for execution of Javascript in action blocks
+    * new TransformerService with stylesheet caching
+    * removed deprecated methods and classes
+
+
+Changes from 1.1.1 to 1.2.0
+---------------------------
+- implemented instance attribute for element submission
+- samples and XSLT stylesheets have been moved to chiba-web back again
+- insert and delete behaviour has been adapted to conform to XForms 1.0 (Second Edition)
+- fixed handling of CDATA nodes
+- fixed xforms-submit-error target to conform to XForms 1.0 (Second Edition)
+- fixed default datatype from 'string' to 'xsd:string'
+- refactored event handling
+- completed message action support
+- added caching of XSLT stylesheet with change detection
+- upgraded parser to Xerces 2.7.1
+- adapted extension functions to conform to XForms 1.0 (Second Edition)
+- fixed rebuild, recalculate, revalidate, refresh and reset actions to conform to
+  XForms 1.0 (Second Edition)
+- updated xforms-rebuild, xforms-recalculate, xforms-revalidate and xforms-refresh
+  event processing to conform to XForms 1.0 (Second Edition)
+- extended event context info to handle multiple properties
+- switch/case reworked to conform to XForms 1.0 (Second Edition)
+- reworked toggle action to conform to XForms 1.0 (Second Edition)
+- fixed required/valid to conform to XForms 1.0 (Second Edition)
+- fixed bug #1251755
+- fixed bug #1095330
+- added xsi:nil support to validation
+- increased validation performance
+- complete rework of ModelItem processing
+- massive refactoring and tuning of UI updating
+- fixed bug #1368980
+- added cookie support for HTTP connector classes
+- fixed xforms-select/xforms-deselect dispatching
+- fixed repeat handling for nodesets with predicates
+
+Changes from 1.1.0 to 1.1.1
+---------------------------
+- build system reworked. new binary dist introduced
+- refactored ChibaAdapter interface
+- small bug fix in HTTPSubmissionHandler
+
+Please see readme file for details on new build-system.
+
+Changes from 1.0.0 to 1.1.0
+---------------------------
+- removed all web-related files from chiba-sandbox and moved them to chiba-servlet which will be released as
+separate download from now
+- debug messages removed from stylesheets due to problems with different Xalan versions
+- fixed relevance handling in compact repeats
+- fixed error handling - exception are now kept until end of event processing for rethrowal
+- Config class has been extended to allow extending the configuration class
+- custom UI elements now can integrated and configured (documentation available in Cookbook)
+- 'mustUnderstand' is now supported
+- cleanup of xslts
+- dispatch action now handles 'bubbles' and 'canceable' - bug [ 1160688 ]
+- fixed bug with instance context initialization
+- fixed bug #1172541 in Schema2XFormsBuilder
+- fixed bug #1123104  in Schema2XFormsBuilder
+- deprecated ChibaAdapter.executeHandler
+- deprecated ChibaBean.getContainer
+- added logging for Extension functions
+- bug fix in ReferenceFinder causing problems with certain xpathes
+- fixed umlaut encoding in stylesheets
+- XForms 1.1 support for submission 'relevant' and 'revalidate' attributes
+- alert generation may now the configured to NOT use CSS
+
+Changes from 0.9.9 to 1.0.0
+---------------------------
+- fixed baseURI issues
+- API cleanup in ServletAdapter and ChibaBean
+- several minor bug-fixes
+- fixed textarea issue with duplicated linefeeds
+- fixed threading issue in Extensionfunctions
+- completed XPath functions coverage (date functions available now)
+- new test cases for extension functions
+- fixed bug #1102368
+- improved internal handling of ModelItemProperties
+- improved internal change notification
+- improved exception handling
+- fixed itemset implementation
+- fixed some Xalan issues
+- refactored select/select1 implementations
+
